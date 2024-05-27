@@ -1,5 +1,5 @@
 "use client";
-
+import { FaDownload, FaLinkedin, FaMailBulk, FaGithub } from "react-icons/fa";
 import React from "react";
 import { motion } from "framer-motion";
 import {
@@ -9,6 +9,18 @@ import {
 } from "@/utils/motion";
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
+
+const copyToClipboard = () => {
+  const email = "fahimashiqurrahman@gmail.com";
+  navigator.clipboard
+    .writeText(email)
+    .then(() => {
+      alert("Email copied to clipboard");
+    })
+    .catch((err) => {
+      console.error("Failed to copy: ", err);
+    });
+};
 
 const HeroContent = () => {
   return (
@@ -38,27 +50,66 @@ const HeroContent = () => {
               {" "}
               Codes{" "}
             </span>
-            in the machine🐈‍⬛
+            in the machine👨‍💻🐈‍⬛
           </span>
         </motion.div>
 
-        <motion.p
-          variants={slideInFromLeft(0.8)}
-          className="text-lg text-gray-400 my-5 max-w-[600px]"
-        >
-          I&apos;m a passionate Computer Science and Engineering student in my
-          final semester with a solid background in backend development and
-          blockchain. I have a fundamental knowledge of software design,
-          development, testing, and have worked on various efficient and
-          scalable mobile and web applications. I am interested in building and
-          collaborating on innovative projects.
-        </motion.p>
-        <motion.a
-          variants={slideInFromLeft(1)}
-          className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
-        >
-          Learn More!
-        </motion.a>
+        <div>
+          <motion.p
+            variants={slideInFromLeft(0.8)}
+            className="text-lg text-gray-400 my-5 max-w-[600px]"
+          >
+            I&apos;m a passionate Computer Science and Engineering student in my
+            final semester with a solid background in backend and blockchain
+            development. I have a fundamental knowledge of software design,
+            development, testing, and have worked on various efficient and
+            scalable mobile and web applications. I am interested in building
+            and collaborating on innovative projects.
+          </motion.p>
+
+          <div className="flex space-x-4">
+            <motion.a
+              variants={slideInFromLeft(1)}
+              className="p-2.5 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
+              href="https://drive.usercontent.google.com/download?id=1ap2Y1bTMdn8kDodRHyjm6jv18KMjL8uD&export=download"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaDownload className="h-4 w-4 inline" />
+              &nbsp;Resume
+            </motion.a>
+            <motion.a
+              variants={slideInFromLeft(1.2)}
+              initial="hidden"
+              animate="visible"
+              className="p-2.5 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
+              onClick={copyToClipboard}
+            >
+              <FaMailBulk className="h-4 w-4 inline" />
+              &nbsp;Email
+            </motion.a>
+            <motion.a
+              variants={slideInFromLeft(1.4)}
+              className="p-2.5 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
+              href="https://www.linkedin.com/in/ash-fahim/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin className="h-4 w-4 inline" />
+              &nbsp;LinkedIn
+            </motion.a>
+            <motion.a
+              variants={slideInFromLeft(1.6)}
+              className="p-2.5 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
+              href="https://github.com/AshFahim"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="h-4 w-4 inline" />
+              &nbsp;GitHub
+            </motion.a>
+          </div>
+        </div>
       </div>
 
       <motion.div
