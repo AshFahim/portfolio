@@ -47,15 +47,6 @@ const Footer = () => {
           <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
             <div className="font-bold text-[16px]">Social Media</div>
             <a
-              href="https://www.youtube.com/yourchannel"
-              className="flex flex-row items-center my-[15px] cursor-pointer"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaYoutube />
-              <span className="text-[15px] ml-[6px]">YouTube</span>
-            </a>
-            <a
               href="https://www.instagram.com/yourusername"
               className="flex flex-row items-center my-[15px] cursor-pointer"
               target="_blank"
