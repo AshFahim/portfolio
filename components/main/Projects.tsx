@@ -49,11 +49,11 @@ const Projects = () => {
           sourceLink="https://source-link-3.com"
         />
         <ProjectCard
-          src="/card.png"
-          title="Project 6"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          demoLink="https://demo-link-3.com"
-          sourceLink="https://source-link-3.com"
+          src="/projects/furni.png"
+          title="Furnicraft"
+          description="A responsive furniture e-commerce portfolio website built with HTML, CSS, JavaScript, and Bootstrap."
+          demoLink="https://www.furnicraftbd.com/"
+          sourceLink="https://github.com/AshFahim/furnicraft_web"
         />
       </div>
     </div>
