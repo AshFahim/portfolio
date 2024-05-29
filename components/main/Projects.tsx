@@ -12,11 +12,11 @@ const Projects = () => {
       </h1>
       <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
         <ProjectCard
-          src="/card.png"
-          title="Project 1"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          demoLink="https://demo-link-3.com"
-          sourceLink="https://source-link-3.com"
+          src="/projects/4shadi.png"
+          title="4shadi"
+          description="4Shadi is a marriage match making platform for divorcee's and married people. Python,FastAPI,MicroService, mongoDB,MySQL,Nextjs14-TypeScript"
+          demoLink=""
+          sourceLink="https://github.com/Eddie2111/4Shadi"
         />
         <ProjectCard
           src="/projects/carshop.png"
@@ -26,27 +26,27 @@ const Projects = () => {
           sourceLink="https://github.com/AshFahim/Vehicle-Accessories-Inventory-Shop"
         />
         <ProjectCard
-          src="/card.png"
-          title="Project 3"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          src="/projects/ghewmew.png"
+          title="GhewMew"
+          description=" A pet adoption website where you can adopt pets and also donate to the organization. Built with Python, FastAPI, MySQL, and React.js."
           demoLink="https://demo-link-3.com"
           sourceLink="https://source-link-3.com"
         />
       </div>
       <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
         <ProjectCard
-          src="/card.png"
-          title="Project 4"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          src="/projects/beeppay.png"
+          title="BeepPay"
+          description="It was a prototype app for a startup. It was built with Flutter and Firebase."
           demoLink="https://demo-link-3.com"
           sourceLink="https://source-link-3.com"
         />
         <ProjectCard
-          src="/card.png"
-          title="Project 5"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          src="/projects/fabric.png"
+          title="Company Register on HyperLedger Fabric"
+          description="Made a company register on HyperLedger Fabric,CockroachDB and forntend with Html, CSS, and JavaScript."
           demoLink="https://demo-link-3.com"
-          sourceLink="https://source-link-3.com"
+          sourceLink="https://github.com/AshFahim/Company-Register-on-HyperLedger-Fabric"
         />
         <ProjectCard
           src="/projects/furni.png"
