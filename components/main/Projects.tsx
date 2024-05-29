@@ -19,11 +19,11 @@ const Projects = () => {
           sourceLink="https://source-link-3.com"
         />
         <ProjectCard
-          src="/card.png"
-          title="Project 2"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          demoLink="https://demo-link-3.com"
-          sourceLink="https://source-link-3.com"
+          src="/projects/carshop.png"
+          title="Vehicle Accessories Inventory Shop"
+          description="The project is built using the Laravel framework and is designed to cater to both users and administrators."
+          demoLink="https://demo1.fusan.live/"
+          sourceLink="https://github.com/AshFahim/Vehicle-Accessories-Inventory-Shop"
         />
         <ProjectCard
           src="/card.png"
