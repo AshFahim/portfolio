@@ -232,7 +232,7 @@ export const Tools = [
   },
   {
     skill_name: "Docker",
-    Image: "/docker.webp",
+    Image: "/tool/docker.webp",
     width: 70,
     height: 70,
   },

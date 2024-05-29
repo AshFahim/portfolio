@@ -6,7 +6,6 @@ import {
   slideInFromRight,
   slideInFromTop,
 } from "@/utils/motion";
-import { SparklesIcon } from "@heroicons/react/24/solid";
 import { FaLinux } from "react-icons/fa";
 
 const SkillText = () => {
@@ -31,7 +30,7 @@ const SkillText = () => {
         variants={slideInFromRight(0.5)}
         className="cursive text-[20px] text-gray-200 mb-10 mt-[10px] text-center"
       >
-        Never miss a task, deadline or idea
+        From Brainwaves to Browser Tabs
       </motion.div>
     </div>
   );
