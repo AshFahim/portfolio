@@ -26,7 +26,7 @@ const Projects = () => {
           sourceLink="https://github.com/AshFahim/Vehicle-Accessories-Inventory-Shop"
         />
         <ProjectCard
-          src="/projects/ghewmew.png"
+          src="/projects/ghewmeew.png"
           title="GhewMew"
           description=" A pet adoption website where you can adopt pets and also donate to the organization. Built with Python, FastAPI, MySQL, and React.js."
           demoLink="https://demo-link-3.com"
