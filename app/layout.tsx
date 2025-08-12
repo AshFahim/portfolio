@@ -1,35 +1,31 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import type { PropsWithChildren } from "react";
+
+import { Footer } from "@/components/main/footer";
+import { Navbar } from "@/components/main/navbar";
+import { StarsCanvas } from "@/components/main/star-background";
+import { siteConfig } from "@/config";
+import { cn } from "@/lib/utils";
+
 import "./globals.css";
-import StarsCanvas from "@/components/main/StarBackground";
-import Navbar from "@/components/main/Navbar";
-import Footer from "@/components/main/Footer";
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import Mouse from "@/components/main/mouse";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Ashiqur Rahman",
-  description: "This is my personal portfolio.",
+export const viewport: Viewport = {
+  themeColor: "#030014",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  ///////////////////////////////////mouse
+export const metadata: Metadata = siteConfig;
 
-  ////////////////////////////////////
-
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
       <body
-        className={
-          "${inter.className} bg-[#030018] overflow-y-scroll overflow-x-hidden"
-        }
+        className={cn(
+          "bg-[#030014] overflow-y-scroll overflow-x-hidden",
+          inter.className
+        )}
       >
         <StarsCanvas />
         <Navbar />
