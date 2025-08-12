@@ -1,61 +1,56 @@
 import Image from "next/image";
-import React from "react";
-import { Socials } from "@/constants";
-const Navbar = () => {
+import Link from "next/link";
+
+import { NAV_LINKS, SOCIALS } from "@/constants";
+
+export const Navbar = () => {
   return (
-    <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001418] backdrop-blur-md z-50 px-10">
-      <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[10px]">
-        <a
+    <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001427] backdrop-blur-md z-50 px-0 md:px-10">
+      <div className="w-full h-full flex flex-wrap md:flex-nowrap items-center justify-between m-auto px-[10px] order-1">
+        <Link
           href="#about-me"
           className="h-auto w-auto flex flex-row items-center"
         >
           <Image
-            src="/NavLogo.png"
-            alt="logo"
-            width={50}
-            height={50}
-            className="cursor-pointer hover:animated animate-wiggle"
+            src="/logo2.png"
+            alt="Logo"
+            width={70}
+            height={70}
+            draggable={false}
+            className="cursor-pointer hover:animate-spin w-[70px] h-[70px]"
+            priority
           />
+          <div className="font-bold ml-[10px] text-gray-300">Ashiqur Rhaman Fahim</div>
+        </Link>
 
-          <span className="font-bold ml-[10px] hidden md:block text-gray-300">
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          </span>
-        </a>
-
-        <div className="w-[500px] h-full flex flex-row items-center justify-between md:mr-20">
-          <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
-            <a href="#about-me" className="cursor-pointer">
-              About me
-            </a>
-            <a href="#skills" className="cursor-pointer">
-              Skills
-            </a>
-            <a href="#projects" className="cursor-pointer">
-              Projects
-            </a>
+        <div className="w-full md:w-[500px] h-full flex flex-row items-center justify-between order-3 basis-full md:order-2 md:basis-auto">
+          <div className="flex items-center justify-between w-full h-auto border-[rgba(112,66,248,0.38)] bg-[rgba(3,0,20,0.37)] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200 text-sm md:text-base">
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.title}
+                href={link.link}
+                className="cursor-pointer hover:text-[rgb(112,66,248)] transition"
+              >
+                {link.title}
+              </Link>
+            ))}
           </div>
         </div>
 
-        <div className="flex flex-row gap-5">
-          {Socials.map((social) => (
-            <a
-              href={social.link}
-              key={social.name}
+        <div className="flex flex-row gap-5 order-2 md:order-3">
+          {SOCIALS.map(({ link, name, icon: Icon }) => (
+            <Link
+              href={link}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noreferrer noopener"
+              aria-label={`${name} Link`}
+              key={name}
             >
-              <Image
-                src={social.src}
-                alt={social.name}
-                width={30}
-                height={30}
-              />
-            </a>
+              <Icon className="h-6 w-6 text-white" />
+            </Link>
           ))}
         </div>
       </div>
     </div>
   );
 };
-
-export default Navbar;
